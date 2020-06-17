@@ -70,7 +70,7 @@ a:active { color: #FF4B33; text-decoration: none }
 /* Some of this has been copied from http://www.mpi-inf.mpg.de/resources/rgbz-camera/ */
 /* Sections of the page. */
 .section { margin: 2em 2em 0.5em 2em; line-height: 130%; }
-.section h2 { margin-top: 0.5em; margin-bottom: 0.2em; }
+.section h2 { margin-top: 0.5em; margin-bottom: 0.2em; font-size: 20pt;}
 
 /* Logo section. */
 .logos { margin: 1.5em 0; text-align: center; margin-top:5px; margin-bottom:10px; }
@@ -108,7 +108,7 @@ div.content-primary .teaser p img { display: block; float: none; border: 0; marg
     background: #eee;
     border: 1px solid #ccc;
     overflow: auto;
-    font-size: 12pt;
+    font-size: 11pt;
 }
 .acknowledgments { line-height: 130%; font-size: 15pt;}
 .acknowledgments p { margin-top: 0; }
