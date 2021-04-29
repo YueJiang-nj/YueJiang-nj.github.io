@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization, CVPR 2020 (Oral)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<!-- Meta tags for Zotero grab citation -->
+<meta name="citation_title" content="SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization">
+<meta name="citation_author" content="Jiang, Yue">
+<meta name="citation_author" content="Ji, Dantong">
+<meta name="citation_author" content="Han, Zhizhong">
+<meta name="citation_author" content="Zwicker, Matthias">
+<meta name="citation_publication_date" content="2020">
+<meta name="citation_conference_title" content="The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2020)">
+<!-- <meta name="citation_volume" content="271"> -->
+<!-- <meta name="citation_issue" content="20"> -->
+<!-- <meta name="citation_firstpage" content="11761"> -->
+<!-- <meta name="citation_lastpage" content="11766"> -->
+<meta name="citation_pdf_url" content="https://yuejiang-nj.github.io/papers/CVPR2020_SDFDiff/paper.pdf">
+
+<!-- Meta tags for search engines to crawl -->
+<meta name="robots" content="index,follow">
+<meta name="description" content="We propose SDFDiff, a novel approach for image-based shape optimization using differentiable rendering of 3D shapes represented by signed distance functions (SDFs). Compared to other representations, SDFs have the advantage that they can represent shapes with arbitrary topology, and that they guarantee watertight surfaces. We apply our approach to the problem of multi-view 3D reconstruction, where we achieve high reconstruction quality and can capture complex topology of 3D objects. In addition, we employ a multi-resolution strategy to obtain a robust optimization algorithm. We further demonstrate that our SDF-based differentiable renderer can be integrated with deep learning models, which opens up options for learning approaches on 3D objects without 3D supervision. In particular, we apply our method to single-view 3D reconstruction and achieve state-of-the-art results.">
+<meta name="keywords" content="differentiable rendering, signed distance field, image-based 3D reconstruction, 3D shape optimization, deep learning, inverse graphics">
+<link rel="author" href="https://yuejiang-nj.github.io/"/>
+
+<!-- Fonts and stuff -->
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,800italic,400,700,800' rel='stylesheet' type='text/css'>-->
+<link rel="stylesheet" type="text/css" href="css/project.css" media="screen" />
+<link rel="stylesheet" type="text/css" media="screen" href="css/iconize.css" />
+<!--<script src="js/google-code-prettify/prettify.js"></script>--> 
+
+
+</head>
+
+<body>
+  <div id="content">
+    <div id="content-inner">
+      <div class="section logos">
+	<a href="https://www.cs.umd.edu/" target="_blank"><img width="18%" height="18%" src="umd.png"></a>
+<!-- 	<a href="http://www.cs.uni-saarland.de/" target="_blank"><img width="15%" height="15%" src="images/uds_csgrad_web.png"></a>
+	<a href="https://www.epfl.ch/en/" target="_blank"><img width="14%" height="14%" src="images/epfl.png"></a>
+	<a href="https://www.cs.ubc.ca/" target="_blank"><img width="14%" height="14%" src="images/ubc.png"></a> -->
+      </div>
+
+      <div class="section head">
+          <h1>SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization</h1>
+
+	<div class="authors">
+	  <a href="https://yuejiang-nj.github.io/" target="_blank">Yue Jiang</a><sup></sup>&#160;&#160;
+	  <a href="https://www.linkedin.com/in/dantong-ji-293b66169/" target="_blank">Dantong Ji</a><sup></sup>&#160;&#160;
+	  <a href="https://h312h.github.io/" target="_blank">Zhizhong Han</a><sup></sup>&#160;&#160;
+	  <a href="http://www.cs.umd.edu/~zwicker/" target="_blank">Matthias Zwicker</a><sup></sup>
+	  <!-- &#160;&#160; -->
+	 <!--  <a href="http://people.mpi-inf.mpg.de/~elgharib/" target="_blank">Mohamed Elgharib</a><sup>1,2</sup>&#160;&#160;<br />
+	  <a href="https://people.epfl.ch/pascal.fua" target="_blank">Pascal Fua</a><sup>3</sup>&#160;&#160;
+	  <a href="http://people.mpi-inf.mpg.de/~hpseidel/" target="_blank">Hans-Peter Seidel</a><sup>1,2</sup>&#160;&#160;
+	  <a href="https://people.epfl.ch/helge.rhodin" target="_blank">Helge Rhodin</a><sup>3,4</sup>&#160;&#160;
+	  <a href="http://virtualhumans.mpi-inf.mpg.de/people/pons-moll.html" target="_blank">Gerard Pons-Moll</a><sup>1,2</sup>&#160;&#160;
+	  <a href="http://www.mpi-inf.mpg.de/~theobalt/" target="_blank">Christian Theobalt</a><sup>1,2</sup> -->
+	</div>
+
+	<div class="affiliations">
+	  <sup></sup><a href="https://www.cs.umd.edu/" target="_blank">University of Maryland, College Park</a> <a href="https://www.cs.umd.edu/" target="_blank"></a>&#160;&#160;
+	  <!-- <sup>2</sup><a href="https://saarland-informatics-campus.de/en/" target="_blank">Saarland Informatics Campus</a>&#160;&#160;
+	  <sup>3</sup><a href="https://www.epfl.ch/en/" target="_blank">EPFL</a>&#160;&#160;
+	  <sup>4</sup><a href="https://www.cs.ubc.ca/" target="_blank">University of British Columbia</a>&#160;&#160; -->
+	  <br />
+	</div>
+
+	<div class="venue">The IEEE/CVF Conference on Computer Vision and Pattern Recognition (<a href="http://cvpr2020.thecvf.com/" target="_blank">CVPR 2020</a>) (<strong><font color="red">Oral</font></strong>), Seattle, WA.</div>
+      </div>
+	  
+	  <!--	<div class="section abstract">
+	  <center>
+	    <h2>
+	      <b>Update: The dataset is now available for download</b>
+	      </h2>
+	    </center>
+	  <center>
+	    <h2>
+	      <b>Update: Live demo of VNect at CVPR17! (<a href="../VNectDemo/" target="_blank">More details</a>)</b>
+	      </h2>
+              </center>
+          </br>
+	  <center>
+	    <h2>
+                <b>Update: <a href="../VNectDemo/" target="_blank">VNect Demo</a> Model and Code Available For <br> Download as a <a href="#library"> C++ Library</a>! </b>
+	      </h2>
+	    </center>
+          </div> -->
+
+
+    <!--   <div class="section teaser">
+          <iframe width="640" height="360" src="//www.youtube-nocookie.com/embed/W1ZNFfftx2E?showinfo=0&controls=1&modestbranding=0&autohide=1&theme=light" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+        <video width="70%" class="tab" controls>Your browser does not support the &lt;video&gt; tag.
+              <source src="https://www.youtube.com/watch?v=l3h9JZHAOqI"/>
+        </video>
+ -->
+
+
+	<!-- <p style="font-size:11px; text-align:center">
+	  Download Video: <a href="content/XNect_SIGGRAPH2020.mp4" target="_blank">HD</a> (MP4, 1080p, 152 MB)
+	</p> -->
+      <!-- </div> -->
+
+          <div class="section teaser">
+	  	<iframe src="https://www.youtube-nocookie.com/embed/l3h9JZHAOqI?showinfo=0&amp;controls=1&amp;modestbranding=0&amp;autohide=1&amp;theme=light" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="640" height="360" frameborder="0"></iframe>
+	<p style="font-size:11px; text-align:center">
+	  <a href="video.mp4" target="_blank">Download Video</a>(MP4, 57.7 MB)
+	</p>
+      </div>
+
+      <div class="section teaser">
+	  	<iframe src="https://www.youtube-nocookie.com/embed/0A83pElG5gk?showinfo=0&amp;controls=1&amp;modestbranding=0&amp;autohide=1&amp;theme=light" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="640" height="360" frameborder="0"></iframe>
+	<p style="font-size:11px; text-align:center">
+	  <a href="talk.mp4" target="_blank">Download Video</a>(MP4, 18.0 MB)
+	</p>
+      </div>
+
+
+      
+
+      <div class="section abstract">
+	<h2>Abstract</h2>
+	<p>
+We propose SDFDiff, a novel approach for image-based shape optimization using differentiable rendering of 3D shapes represented by signed distance functions (SDFs). Compared to other representations, SDFs have the advantage that they can represent shapes with arbitrary topology, and that they guarantee watertight surfaces. We apply our approach to the problem of multi-view 3D reconstruction, where we achieve high reconstruction quality and can capture complex topology of 3D objects. In addition, we employ a multi-resolution strategy to obtain a robust optimization algorithm. We further demonstrate that our SDF-based differentiable renderer can be integrated with deep learning models, which opens up options for learning approaches on 3D objects without 3D supervision. In particular, we apply our method to single-view 3D reconstruction and achieve state-of-the-art results.
+	</p>
+      </div>
+
+<!--      <div class="section library">
+	<h2>VNect Library (New!!)</h2>
+        <a name="library"></a>
+	<p>
+        The C++ Library (Windows only) comes bundled with the lastest, greatest, faster and better VNect demo network, along with the kinematic skeleton fitting stage, and configurable filtering for various stages of the pipeline. The hyperparameters of the various stages are configurable, and the motion tracking results can be exported to BVH. For further details refer to the documentation supplied with the library. For access, see <a href='https://gvv-assets.mpi-inf.mpg.de/vnectlib'>GVV Assets Portal</a>.
+	</p>
+	<center>
+	  <ul>
+            <li class="grid_larger">
+	      <div class = "griditem_larger">
+                  <img src="images/vnect_bvh1.gif" alt="VNect BVH Example 1">
+		</div>
+	      </li>
+	    <li class="grid_larger"> 
+	       <div class = "griditem_larger"> 
+                  <img src="images/vnect_bvh2.gif" alt="VNect BVH Example 2">
+	       </div>
+	     </li>
+	    </ul>
+	    </center>
+</div> -->
+
+      <div class="section downloads">
+	<h2>Resources and Downloads</h2>
+	<center>
+	  <ul>
+            <li class="grid">
+	      <div class = "griditem">
+		<a href="paper.pdf" target="_blank" class="imageLink"><img src = "teaser.png"></a><br />
+		  Paper<br/><a href="paper.pdf" target="_blank">PDF, 3.7 MB</a>
+		</div>
+	      </li>
+            <li class="grid">
+	      <div class = "griditem">
+		<a href="supp.pdf" target="_blank" class="imageLink"><img src = "teaser.png"></a><br />
+		  Supp<br/><a href="supp.pdf" target="_blank">PDF, 21.2 MB</a>
+		</div>
+	      </li>
+	    <li class="grid"> 
+	       <div class = "griditem"> 
+		<a href="https://github.com/YueJiang-nj/CVPR2020-SDFDiff" target="_blank" class="imageLink"><img src = "teaser.png"></a><br />
+	     	Implementation<br /> <a href="https://github.com/YueJiang-nj/CVPR2020-SDFDiff" target="_blank">GitHub</a>
+                <!--<br />(See Contact section) -->
+	       </div>
+	     </li>
+	    <li class="grid"> 
+	       <div class = "griditem"> 
+		<a href="https://www.youtube.com/watch?v=l3h9JZHAOqI" target="_blank" class="imageLink"><img src = "teaser.png"></a><br />
+	     	Video<br /> <a href="https://www.youtube.com/watch?v=l3h9JZHAOqI" target="_blank">MP4, 57.6 MB</a>
+	       </div>
+	     </li>
+
+	     <li class="grid"> 
+	       <div class = "griditem"> 
+		<a href="https://www.youtube.com/watch?v=0A83pElG5gk" target="_blank" class="imageLink"><img src = "teaser.png"></a><br />
+	     	Talk<br /> <a href="https://www.youtube.com/watch?v=0A83pElG5gk" target="_blank">MP4, 18.0 MB</a>
+	       </div>
+	     </li>
+	   <!--  <li class="grid"> 
+	       <div class = "griditem"> 
+		<a href="https://docs.google.com/spreadsheets/d/12dmh9_Tx7bj1UXgM5v1KIXdID7bhqFKI73XTWEcqzmY/edit?usp=sharing" target="_blank" class="imageLink"><img src = "images/qual.jpg"></a><br />
+	     	CC BY Sequences<br /> <a href="https://docs.google.com/spreadsheets/d/12dmh9_Tx7bj1UXgM5v1KIXdID7bhqFKI73XTWEcqzmY/edit?usp=sharing" target="_blank">Links</a>
+	       </div>
+	     </li> -->
+             
+	    </ul>
+	    </center>
+	    </div>
+<br />
+
+
+
+ <div class="section list">
+	<h2>Citation</h2>
+	<p><a href="reference.bib" target="_blank">BibTeX, 1 KB</a></p>
+	<div class="section bibtex">
+	      <pre>
+@InProceedings{jiang2020sdfdiff,
+    author = {Jiang, Yue and Ji, Dantong and Han, Zhizhong and Zwicker, Matthias},
+    title = {SDFDiff: Differentiable Rendering of Signed Distance Fields for 3D Shape Optimization},
+    booktitle = {The IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month = {June},
+    year = {2020}
+}</pre>
+	  </div>
+ </div>
+   
+      <div class="section contact">
+	<h2>Contact</h2>
+        <a name="contact"></a>
+        For questions and clarifications, please get in touch with:<br />
+        Yue Jiang <a href="mailto:yuejiang@cs.umd.edu">yuejiang@cs.umd.edu</a> <br />
+      </div>
+
+      <div class="section">
+	<hr class="smooth">
+	  Template from GVV Group at MPI.
+	  <!-- <a href="http://www.zotero.org" target="_blank">Zotero</a> translator friendly. |  -->
+          <!--Page last updated--> 
+              <!--#config timefmt="%d-%b-%Y" --><!--#echo var="LAST_MODIFIED" -->
+              <!-- <a href="https://imprint.mpi-klsb.mpg.de/inf/xnect">Imprint</a> | -->
+              <!-- <a href="https://data-protection.mpi-klsb.mpg.de/inf/xnect">Data Protection</a>  -->
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
