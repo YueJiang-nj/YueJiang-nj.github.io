@@ -37,6 +37,60 @@
                 font-size: 22px;
                 font-weight: 600
             }
+
+            :root {
+    --background-color: #fefbf5;
+    /* --highlight-color: #b6274e; */
+    /* --main-color: #684e43; */
+    /* --link-color: #86985c; */
+    /* --link-color-hover: #8e6e29; */
+    /* --secondary-link-color: #6d8436; */
+    --secondary-link-border-color: #a5af97;
+    /* --secondary-content-background-color: #fffefc; */
+    /* --link-button-background-color: #fffdfa; */
+    /* a8826c 324d67 */
+}
+
+            .content-container{width:100%;padding:0 30px}
+.main-news-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
+@media (min-width: 1200px) { .main-news-container{padding-top:45px;} }
+.main-news-container .subtitle{margin-top:0px;color:var(--main-color)}
+
+section.overview ul,section.overview li,section.overview h3,section.overview h1,section.overview p{margin:0;padding:0}
+section.overview h1{font-weight:700}
+section.overview li{font-weight:400;list-style:none}
+.join,.up::after,.down::before{background-position:50% 50%}
+.up::after,.down::before{background-repeat:no-repeat;content:"";display:block;height:20px}
+.up::after{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA3IDQiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0xIDRWM2gxVjJoM3YxaDF2MWgxVjJINlYxSDVWMEgydjFIMXYxSDB2MiIvPjwvc3ZnPg==)}
+.down::before{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI3cHgiIGhlaWdodD0iNHB4IiB2aWV3Qm94PSIwIDAgNyA0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA3IDQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiM1NjZjN2YiIHBvaW50cz0iNiwwIDYsMSA1LDEgNSwyIDIsMiAyLDEgMSwxIDEsMCAwLDAgMCwyIDEsMiAxLDMgMiwzIDIsNCA1LDQgNSwzIDYsMyA2LDIgNywyIDcsMCAiLz48L3N2Zz4=)}
+.join{background-repeat:repeat-y;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxcHgiIGhlaWdodD0iMXB4IiB2aWV3Qm94PSIwIDAgMSAxIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxIDEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0wLDBoMXYxSDBWMHoiLz48L3N2Zz4=)}
+.thin,.thick{background:#ffffff}
+.thin{border:1px solid var(--secondary-link-border-color);padding:.5em}
+.thick{border:3px solid var(--secondary-link-border-color);padding:.5em;color:var(--main-color);font-size:1.25rem}
+.main{text-align:center}
+.main ul{display:block;width:150px;margin:1em auto 0}
+ul.row{width:100%;display:flex;align-items:flex-start}
+ul.row li.page{flex:1;margin:0 .5em;min-width:280px}
+ul.row li.page.stretch{align-self:stretch}
+ul.row li.page:first-child{margin-left:0}
+ul.row li.page:last-child{margin-right:0}
+ul.row li.page h3 + ul.content{margin-top:1.5em}
+ul.row li.page ul.content li{border-top:1px solid var(--secondary-link-border-color);padding:2px 5px}
+ul.row li.page ul.content li.level-2{padding:2px 12px}
+ul.row li.page ul.content li ul.section li{border-top:none;padding:0}
+ul.row li.page ul.content li ul.section li:before{content:"― "}
+section.overview{background:var(--secondary-content-background-color);transition:max-width 400ms ease-in-out;padding:20px;margin:auto;z-index:99}
+section.overview .thin h3{will-change:auto;transition:transform 400ms ease-in-out;transform-origin:0 50%}
+section.overview .thin b{display:block;padding:2px 5px}
+section.overview .thin ul.content{transition:opacity 200ms ease;opacity:1}
+@media (max-width: 1480px) { ul.row li.page{margin:0} }
+.toggle-overview {background:var(--background-color);display:block;text-align:center;padding:5px;color:var(--main-color);font-weight:500}
+.toggle-overview:hover {text-decoration:none} 
+@media (max-width: 560px) {section.overview {display:none}}
+.thick>p {font-size: 1rem}
+.thick>p>a, .think>p>a:hover {background:var(--link-button-background-color);display:block;text-align:center;padding:5px;color:var(--main-color);font-weight:500;text-decoration:none}
+.hide{display:none}
+
         </style>
 
         <link rel="icon" type="image/png" href="images/seal_icon.png">
@@ -52,11 +106,17 @@
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
             ga('create', 'UA-64069893-1', 'auto');
             ga('send', 'pageview');
+            
         </script>
         <!-- End : Google Analytics Code -->
         <!-- Scramble Script by Jeff Donahue -->
         <script src="js/scramble.js"></script>
+
+       
+
     </head>
+
+
 
     <body>
         <table width="980" border="0" align="center" border="0" cellspacing="0" cellpadding="0">
@@ -133,16 +193,130 @@
     <tr>
 
                 <ul>
-                    <heading> <FONT COLOR="#ff0000"><b> I will be on the job market for tenure-track faculty positions or relevant industry research positions (2024-2025).</b> </FONT><br> </heading>
-                        <heading> <FONT COLOR="#ff0000"><b> Feel free to reach out if you are aware of any suitable openings!</b> </FONT> </heading>
+                    <FONT COLOR="#ff0000"><b> I am on the job market for tenure-track faculty positions or relevant industry research positions (2024-2025).</b> </FONT><br> 
+                        <FONT COLOR="#ff0000"><b> Feel free to reach out if you are aware of any suitable openings!</b> </FONT> 
                 </ul>
             </tr>
 
         </tr>
 
     </table>
-    
 
+<section class="overview" id="overview">
+
+<h2><font color="black">My Research</font></h2>
+
+    My work focuses on developing computational methods that understand, generate, and adapt UIs, ensuring technology becomes more intuitive and responsive to human behavior. 
+  Drawing on my expertise in computer vision (eye tracking, human poses, and gestures), deep learning, and UI design, I aim to develop human-centered intelligent systems.
+   My vision of Human-Centered Interaction Intelligence (HCII) focuses on prioritizing human needs and experiences, creating more intuitive and effective interactions between people and technology. 
+I envision HCII enhancing user experiences while providing critical insights into human cognition. 
+  
+<br> <br> 
+
+<div class="main thick">
+    <b>Computational Representation for Graphical User Interfaces</b>
+    <p align="left"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Explore how to best represent graphical UIs for computation.
+    </p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Capture the key properties and characteristics of UI designs so that we do not need to encode them manually.<br> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Effectively carry out the operations we need for downstream applications, such as how to learn, infer, optimize, and adapt.
+        </p>
+    <p><a href="javascript:$('#overview-representation ul.content').slideToggle();"><u>Show/Hide Papers</u></a></p>
+  </div>
+  <ul class="row" id="overview-representation">
+    <li class="page stretch join up down">
+      <div class="thin">
+        <b>Constraint-Based Representation</b>
+        <ul class="content hide">
+          <li><i>Disjunctive Constraint System for Resizable GUIs</i>:<br /><a target="_blank" href="https://yuejiang-nj.github.io/Publications/2019CHI_ORCLayout/paper.pdf">ORC Layout (CHI2019)</a></li>
+          <li><i>GUI-specific Constraint Solver</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2020CHI_ORCSolver/project_page/main.html">ORCSolver (CHI2020)</a></li>
+          <li><i>Reverse Engineering Resizable GUIs</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2021CHI_ReverseORC/paper.pdf">ReverseORC (CHI2021)</a></li>
+          <li><i>Adaptive Documents</i>: <a target="_blank" href="file:///Users/jiangy6/Documents/YueJiang-nj.github.io/Publications/2024VLHCC_FlexDoc/paper.pdf">FlexDoc (VL/HCC2024)</a></li>
+          <li><i>GUI Editor for Resizable GUIs</i>: <a target="_blank" href="">L3 Editor</a></li>
+        </ul>
+      </div>
+      <!--div class="thin" style="margin-top:20px;">
+        <b>Language Pragmatics</b>
+        <ul class="content hide">
+          <li><i>Goal Interpretation</i>: <a target="_blank" href="https://sites.google.com/view/hand-me-that/overview">[HandMeThat]</a></li>
+        </ul>
+      </div-->
+    </li>
+    <li class="page stretch join up down">
+      <div class="thin">
+        <b>Graph-Based Representation</b>
+        <ul class="content hide">
+            <li><i>Graph-Based Constraint Prediction for GUI Autocompletion</i>: <a href="https://yuejiang-nj.github.io/Publications/2024CHI_Graph4GUI/project_page/main.html">Graph4GUI (CHI2024)</a></li>
+            <li><i>Suggesting Colors with Graph Neural Networks</i>:<br /><a href="https://drive.google.com/file/d/1nnQdvKs-98n_Y0wwe_nEMElBOoAlMJ9K/view">Suggesting Color (CHI2024 Workshop)</a></li>
+            <!-- <li class="level-2">+ <i>3D</i> <a target="_blank" href="http://web.stanford.edu/~joycj/projects/ns3d_cvpr_2023.html">[Neuro-Symbolic 3D]</a></li> -->
+          <!-- <li class="level-2">+ <i>Object Representation Learning</i>: <a target="_blank" href="https://lang-orl.github.io">[Language-Mediated ORL]</a> -->
+          <!-- <li><i>Metaconcepts</i>:<br /><a target="_blank" href="http://vcml.csail.mit.edu">[Visual Concept & Metaconcept]</a></li> -->
+          <!-- <li class="level-2">+ <i>Continual Learning</i>: <a target="_blank" href="https://people.csail.mit.edu/jerrymei/projects/falcon/">[FALCON]</a></li> -->
+          <!-- <li><i>Physical Events and Causality</i>: <a target="_blank" href="http://dcl.csail.mit.edu/">[Dynamic Concept Learning]</a>, <a target="_blank" href="https://sites.google.com/stanford.edu/clevrer-humans">[CLEVRER-Humans]</a></li> -->
+          <!-- <li><i>Temporal-Logic Events</i>:<br /><a target="_blank" href="http://toqnet.csail.mit.edu/">[Temporal and Object Quantification]</a></li> -->
+          <!-- <li><i>Programmatic Image Representations</i>:<br /><a target="_blank" href="http://pgim.csail.mit.edu/">[Program-Guided Image Manipulators]</a>
+          <li class="level-2">+ <i>Perspective</i>: <a target="_blank" href="http://p3i.csail.mit.edu/">[P3I]</a></li>
+          <li class="level-2">+ <i>Multi-Plane</i>: <a target="_blank" href="http://bpi.csail.mit.edu/">[Box Program]</a></li>
+          <li><i>Programmatic Human Motion</i>: <a target="_blank" href="https://sumith1896.github.io/motion2prog/">[Motion Program]</a>, <a target="_blank" href="https://sumith1896.github.io/motion-concepts/">[Motion Concept]</a></li> -->
+        </ul>
+      </div>
+    </li>
+    <!-- <li class="page stretch join up down">
+      <div class="thin">
+        <b>Action Concepts</b>
+        <ul class="content hide">
+          <li><i>Neuro-Symbolic Policies</i>: <a target="_blank" href="https://progport.github.io/">[NSPort]</a></li>
+          <li class="level-2">+ <i>Part-Centric Skill Modeling</i>:<br /><a target="_blank" href="https://cpmcorl2023.github.io/">[Composable Part-Based Policy]</a></li>
+          <li class="level-2">+ <i>Learning from Video</i>:<br /><a target="_blank" href="https://flow-diffusion.github.io/">[Actions from Actionless Videos]</a></li>
+          <li><i>Neuro-Symbolic Planning Representations</i>: <a target="_blank" href="https://pdsketch.csail.mit.edu/">[PDSketch]</a></li>
+          <li class="level-2">+ <i>Contact-Centric Skill Modeling</i>: <a target="_blank" href="https://arxiv.org/pdf/2311.03293.pdf">[Manipulation Mechanisms]</a></li>
+          <li class="level-2">+ <i>LLM Structure Proposal</i>: <br /><a target="_blank" href="https://arxiv.org/abs/2312.08566">[Adaptive Domain from Language]</a></li>
+          <li class="level-2">+ <i>Segmentation and Counterfactuals</i>: <br /><a target="_blank" href="https://sites.google.com/view/grounding-plans"">[Modes from Language]</a></li>
+        </ul>
+      </div>
+    </li> -->
+  </ul>
+  <div class="main thick">
+    <b>Understanding Human Behaviors and Interactions</b>
+    <p>How can we efficiently learn these concepts from natural supervisions (<i>e.g.</i>, language, videos)?</p>
+    <p>How can we leverage the structures of these concepts to make inference and planning faster?</p>
+    <p><a href="javascript:$('#overview-algorithm ul.content').slideToggle();"><u>Show/Hide Papers</u></a></p>
+  </div>
+  <ul class="row" id="overview-algorithm">
+    <li class="page join down">
+      <div class="thin">
+        <b>Eye Tracking</b>
+        <ul class="content hide">
+          <li><i>Eye Tracking across Different UI Types</i>: <a href="https://yuejiang-nj.github.io/Publications/2023CHI_UEyes/project_page/main.html">UEyes (CHI2023)</a></li>
+          <li><i>Personalized Scanpath Prediction</i>: <a target="_blank" href="">EyeFormer (UIST2024)</a></li>
+          <li><i>Design Decisions in Scanpath Modeling</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2024ETRA_Saliency/paper.pdf">Design Decisions (ETRA2024)</a></li>
+          <li><i>Gaze Behaviors on Visualization</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2024ETRA_VisRecall++/paper.pdf">VisRecall++ (ETRA2024)</a></li>
+          <li><i>Eye Tracking on Visual Search</i>:<br /><a target="_blank" href="">Visual Search</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="page join down">
+      <div class="thin">
+        <b>Human Motion Capture</b>
+        <ul class="content hide">
+          <li><i>Capturing Human Pose, Clothing, Facial Expression, and Hand Gestures from RGB Videos</i>: <a target="_blank" href="https://people.mpi-inf.mpg.de/~mhaberma/projects/2022-HiFECap/">HiFECap (BMVC2022)</a></li>
+          <li><i>Activity Recognition with Doppler Radar Data</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2021CHI_Vid2Doppler/paper.pdf">Vid2Doppler (CHI2021)</a></li>
+          <li><i>Differentiable Rendering for 3D Reconstruction</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2020CVPR_SDFDiff/project_page/main.html">SDFDiff (CVPR2020 Oral Top 5%)</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="page join down">
+        <div class="thin">
+          <b>Interactive Agents</b>
+          <ul class="content hide">
+            <li><i>UI-Speciifc Vision Language Model</i>: <a target="_blank" href="https://arxiv.org/abs/2310.04869">ILuvUI</a></li>
+            <li><i>UI Automation for Accessibility Testing</i>: <a target="_blank" href="https://arxiv.org/abs/2310.02424">AXNav (CHI2024)</a></li>
+            <li><i>Code-Based Synthetic UI Generation</i>: <a target="_blank" href="">DreamStruct (ECCV2024)</a></li>
+            <li><i>Interactive Visualization and Writing Assistant Tool</i>: <a target="_blank" href="https://yuejiang-nj.github.io/Publications/2022CHI_Gender/paper.pdf">Gender Roles in Greeting Card Messages (CHI2022 Best Paper Honorable Mention)</a></li>
+          </ul>
+        </div>
+      </li>
+  </ul>
+</section>
         
                                 
 <table width="110%" align="center" border="0" cellspacing="20" cellpadding="20">
@@ -486,7 +660,7 @@
                                 <img src="Logos/CHI2021.png" alt="" width="95%" style="border-style: none">
                                 <td width="67%" valign="center">
           <!-- <p><a href="CHI2019/paper.pdf" id="JPM15"> -->
-          <heading>Vid2Doppler: Synthesizing Doppler Radar Data from Videos forTraining Privacy-Preserving Activity Recognition</heading></a><br>
+          <heading>Vid2Doppler: Synthesizing Doppler Radar Data from Videos for Training Privacy-Preserving Activity Recognition</heading></a><br>
           <a href='https://karan-ahuja.com/'>Karan Ahuja</a>,
           <strong>Yue Jiang</strong>,
             <a href='http://www.mayankgoel.courses/'>Mayank Goel</a>,
@@ -1862,7 +2036,10 @@
             </tr>
         </table>
 
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
     </body>
 
     
-</html
+</html>
