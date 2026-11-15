@@ -92,6 +92,16 @@ section.overview .thin ul.content{transition:opacity 200ms ease;opacity:1}
 .thick>p>a, .think>p>a:hover {background:var(--link-button-background-color);display:block;text-align:center;padding:5px;color:var(--main-color);font-weight:500;text-decoration:none}
 .hide{display:none}
 
+            .supervised-phd,
+            .supervised-undergrad-masters {
+                text-decoration-line: underline;
+                text-decoration-thickness: 1px;
+                text-underline-offset: 3px;
+                text-decoration-skip-ink: none;
+            }
+            .supervised-phd { text-decoration-style: solid; }
+            .supervised-undergrad-masters { text-decoration-style: double; }
+
             .publication-logo {
                 display: block;
                 /* Balance visible area across wide and compact logo shapes. */
@@ -283,10 +293,10 @@ section.overview .thin ul.content{transition:opacity 200ms ease;opacity:1}
                                     <li>Aryan Garg (Undergraduate student, visiting from IIT; <strong>Paper: IUI2027</strong>; Next Stop: Ph.D., University of Wisconsin-Madison)
                                         <span style="float:right;">2024 – 2026</span>
                                     </li>
-                                    <li>Linjie Qiu (Master’s student; <strong>Paper: IJHCI</strong>2026; Next Stop: Ph.D., Hong Kong University of Science and Technology, Guangzhou Campus)
+                                    <li>Linjie Qiu (Master’s student; <strong>Paper: IJHCI2026</strong>; Next Stop: Ph.D., Hong Kong University of Science and Technology, Guangzhou Campus)
                                         <span style="float:right;">2025</span>
                                     </li>
-                                    <li>Duotun Wang (Master’s student, University of Maryland; <strong>Paper: IJHCI</strong>2026; Next Stop: Ph.D., Hong Kong University of Science and Technology, Guangzhou Campus)
+                                    <li>Duotun Wang (Master’s student, University of Maryland; <strong>Paper: IJHCI2026</strong>; Next Stop: Ph.D., Hong Kong University of Science and Technology, Guangzhou Campus)
                                         <span style="float:right;">2020 – 2027</span>
                                     </li>
                                 </ul>
@@ -506,6 +516,11 @@ My research unifies computational understanding of digital interfaces with predi
 
 <table width="110%" align="center" border="0" cellspacing="20" cellpadding="20">
     <h2>Full Paper Publications</h2>
+    <tr>
+        <td colspan="2" style="padding-top:0; padding-bottom:0;">
+            <p>Ph.D. students I directly supervised are <span class="supervised-phd">underlined</span>. Undergraduate and Master’s students I directly supervised are <span class="supervised-undergrad-masters">double-underlined</span>. Students are labeled according to whether they were Ph.D., master’s, or undergraduate students when the paper was submitted.</p>
+        </td>
+    </tr>
 
     <tr>
         <td width="20%" valign="top" align="right">
@@ -513,7 +528,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Toward Human-Like Task-Driven Gaze Navigation for Visualizations</heading><br>
-            Beichen Xue, Enkelejda Kasneci, <strong>Yue Jiang</strong><br>
+            <span class="supervised-undergrad-masters">Beichen Xue</span>, Enkelejda Kasneci, <strong>Yue Jiang</strong><br>
             <em>ACM CHI Conference on Human Factors in Computing Systems</em> (<strong>CHI2027</strong>) <span>(Minor revision)</span><br>
         </td>
     </tr>
@@ -524,7 +539,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>DashTrace: Understanding Task-Driven Visual Attention and Multimodal Behavior in Analytical Dashboards</heading><br>
-            Yura Hwang, Beichen Xue, Yin Yang, <strong>Yue Jiang</strong><br>
+            <span class="supervised-phd">Yura Hwang</span>, <span class="supervised-undergrad-masters">Beichen Xue</span>, Yin Yang, <strong>Yue Jiang</strong><br>
             <em>ACM CHI Conference on Human Factors in Computing Systems</em> (<strong>CHI2027</strong>) <span>(Major revision)</span><br>
         </td>
     </tr>
@@ -535,7 +550,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>A11yLTLNav: Automatic Detection of Accessibility Navigation Failures</heading><br>
-            Chenming Ge, Kewen Peng, Chengyang Shi, Ben Greenman, <strong>Yue Jiang</strong><br>
+            <span class="supervised-undergrad-masters">Chenming Ge</span>, <span class="supervised-phd">Kewen Peng</span>, <span class="supervised-undergrad-masters">Chengyang Shi</span>, Ben Greenman, <strong>Yue Jiang</strong><br>
             <em>ACM CHI Conference on Human Factors in Computing Systems</em> (<strong>CHI2027</strong>) <span>(Major revision)</span><br>
         </td>
     </tr>
@@ -546,7 +561,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Pace by Gaze: A Gaze-Informed Simulator of Constrained Cursor Movement</heading><br>
-            Xiangyu Zhou, Beichen Xue, <strong>Yue Jiang</strong>, Steve Oney<br>
+            Xiangyu Zhou, <span class="supervised-undergrad-masters">Beichen Xue</span>, <strong>Yue Jiang</strong>, Steve Oney<br>
             <em>ACM CHI Conference on Human Factors in Computing Systems</em> (<strong>CHI2027</strong>) <span>(Major revision)</span><br>
         </td>
     </tr>
@@ -557,7 +572,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Generative User Interfaces: A Definition and Design Space</heading><br>
-            Katja Pott*, Eunhye Kim* (co-first author), ..., Kewen Peng, ..., Beichen Xue, ... <strong>Yue Jiang</strong>, et al. (students and supervisors listed in alphabetical order respectively except the first authors)<br>
+            Katja Pott*, <span class="supervised-undergrad-masters">Eunhye Kim*</span> (co-first author), ..., <span class="supervised-phd">Kewen Peng</span>, ..., <span class="supervised-undergrad-masters">Beichen Xue</span>, ... <strong>Yue Jiang</strong>, et al. (students and supervisors listed in alphabetical order respectively except the first authors)<br>
             <em>ACM CHI Conference on Human Factors in Computing Systems</em> (<strong>CHI2027</strong>) <span>(Minor revision)</span><br>
         </td>
     </tr>
@@ -569,7 +584,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>ControlGUI: Guiding Generative GUI Exploration through Wireframe and Perceptual Visual Flow</heading><br>
-            Aryan Garg*, <strong>Yue Jiang*</strong>, Antti Oulasvirta (*Equal Contribution)<br>
+            <span class="supervised-undergrad-masters">Aryan Garg*</span>, <strong>Yue Jiang*</strong>, Antti Oulasvirta (*Equal Contribution)<br>
             <em>ACM Conference on Intelligent User Interfaces</em> (<strong>IUI2027</strong>)<br>
         </td>
     </tr>
@@ -580,8 +595,8 @@ My research unifies computational understanding of digital interfaces with predi
                 <img style="--logo-width: 120px;" class="publication-logo" src="Logos/CHI2026.png" alt="">
                 <td width="75%" valign="center">
         <!-- <p><a href="CHI2019/paper.pdf" id="JPM15"> -->
-        <heading>Scanpath Prediction for Visual Search on Graphical User Interfaces</heading><br>
-        <em>SeekUI</em><br>
+        <heading>SeekUI: Scanpath Prediction for Visual Search on Graphical User Interfaces</heading><br>
+      
          <a href='https://www.linkedin.com/in/zixin-guo-71596a178/?originalSubdomain=hk'>Zixin Guo*</a>,
         <strong>Yue Jiang*</strong>,
         <a href='https://luis.leiva.name/web/'>Luis A. Leiva</a>,
@@ -605,7 +620,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Maru: Information Architecture as a Shared Language for Generating Aligned and Persistent User Interfaces</heading><br>
-            Eunhye Kim, DaEun Choi, Bryan Min, Hyunjung Yi, <strong>Yue Jiang</strong>, Juho Kim<br>
+            <span class="supervised-undergrad-masters">Eunhye Kim</span>, DaEun Choi, Bryan Min, Hyunjung Yi, <strong>Yue Jiang</strong>, Juho Kim<br>
             <em>ACM Symposium on User Interface Software and Technology</em> (<strong>UIST2026</strong>)<br>
             <div class="paper">
                 <a href="Publications/2026UIST_Maru/paper.pdf">Paper</a>
@@ -619,7 +634,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Spatula: Exploring On-Demand In-Situ Interfaces and Interaction for Attribute Control</heading><br>
-            Boyu Li, Linjie Qiu, Lin-Ping Yuan, Duotun Wang, <strong>Yue Jiang</strong>, Zeyu Wang, Hongbo Fu<br>
+            Boyu Li, <span class="supervised-undergrad-masters">Linjie Qiu</span>, Lin-Ping Yuan, <span class="supervised-phd">Duotun Wang</span>, <strong>Yue Jiang</strong>, Zeyu Wang, Hongbo Fu<br>
             <em>ACM Symposium on User Interface Software and Technology</em> (<strong>UIST2026</strong>)<br>
             <div class="paper">
                 <a href="Publications/2026UIST_Spatula/paper.pdf">Paper</a>
@@ -633,7 +648,7 @@ My research unifies computational understanding of digital interfaces with predi
         </td>
         <td width="75%" valign="center">
             <heading>Visual Generative Artificial Intelligence (GenAI) in Mixed Reality (MR): A Survey of Techniques, Interaction Designs, and Evaluations</heading><br>
-            Duotun Wang, Linjie Qiu, Linlin Cai, <strong>Yue Jiang</strong>, Mingming Fan, Zeyu Wang<br>
+            <span class="supervised-phd">Duotun Wang</span>, <span class="supervised-undergrad-masters">Linjie Qiu</span>, Linlin Cai, <strong>Yue Jiang</strong>, Mingming Fan, Zeyu Wang<br>
             <em>International Journal of Human-Computer Interaction</em> (<strong>IJHCI2026</strong>)<br>
             <div class="paper">
                 <a href="Publications/2026IJHCI_GenAI_XR/paper.pdf">Paper</a>
@@ -689,7 +704,7 @@ My research unifies computational understanding of digital interfaces with predi
            <!-- <p><a href="CHI2019/paper.pdf" id="JPM15"> -->
            <heading>Graph4GUI: Graph Neural Networks for Representing Graphical User Interfaces</heading></a><br>
            <strong>Yue Jiang</strong>,
-           <a href='https://www.linkedin.com/in/changkong-zhou-a34bab211/?originalSubdomain=fi'>Changkong Zhou</a>,
+           <a href='https://www.linkedin.com/in/changkong-zhou-a34bab211/?originalSubdomain=fi'><span class="supervised-undergrad-masters">Changkong Zhou</span></a>,
            <a href='https://www.mit.edu/~vgarg/'>Vikas Garg*</a>,
            <a href='https://users.aalto.fi/~oulasvir/'>Antti Oulasvirta*</a>
              <br>
@@ -740,7 +755,7 @@ My research unifies computational understanding of digital interfaces with predi
         <a href='https://oaishi.github.io/'>Faria Huq</a>,
         <strong>Yue Jiang</strong>,
         <a href='https://jasonwunix.com/'>Jason Wu</a>,
-        <a href='https://www.linkedin.com/in/amanda--li'>Xin Yue Li</a>,
+        <a href='https://www.linkedin.com/in/amanda--li'><span class="supervised-undergrad-masters">Amanda Li</span></a>,
         <a href='https://www.cs.cmu.edu/~jbigham/'>Jeffrey Bigham</a>,
         <a href='https://amypavel.com/'>Amy Pavel</a>
         <br>
